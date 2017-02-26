@@ -1,12 +1,12 @@
 # Starstruck-Code
-This is 3922A's code for the 2016/17 VEX game Starstruck
+## This is 3922A's code for the 2016/17 VEX game Starstruck
 
-This includes: 
+### This includes: 
 
-PID control //Here
+* PID control `//Here`
 
-Slew rate //coming
+* Slew rate `//coming`
 
-Rerun //coming
+* Rerun `//coming`
 
-Truespeed //Have to ask if I can use
+* Truespeed `//Have to ask if I can use`
