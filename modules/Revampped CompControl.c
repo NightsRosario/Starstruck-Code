@@ -24,8 +24,8 @@
 
 //Main competition background code...do not modify!
 #include "Vex_Competition_Includes.c"
-
 #include "Autonomous_Programs.h"
+#include "Util.h"
 
 int auton = 0;
 
@@ -89,7 +89,7 @@ task LCDControl(){
 
 void pre_auton(){
 
-  bStopTasksBetweenModes = true;
+	bStopTasksBetweenModes = true;
 	bDisplayCompetitionStatusOnLcd = false;
 	startTask(LCDControl);
 
@@ -100,7 +100,7 @@ void pre_auton(){
 task autonomous()
 {
 
-  stopTask(LCDControl);
+	stopTask(LCDControl);
 	switch(auton){
 	case 1:
 		startTask(Auton1);//redauton();
@@ -132,10 +132,12 @@ task usercontrol(){
 
 	// User control code here, inside the loop
 	stopTask(LCDControl);
+	startTask(ResetENC);
+	stopTask(ResetENC);
 	while (true){
 
-		motor[port1]= 50;
-		wait1Msec(50);
+		startTask(Claw);
+
 	}
 
 }
